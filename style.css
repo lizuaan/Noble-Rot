@@ -1,10 +1,29 @@
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 body {
     background-color: #141414;
     overflow-x: hidden;
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+}
+.navigator {
+    font-family:'League Spartan', sans-serif;;
+    font-size: 20px;
+    width: 100%;
+    margin-left:34px;
+    margin-right:34px;
+    max-width: 1690px;
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .tittle {
     font-family: 'Montserrat', sans-serif;
@@ -13,11 +32,6 @@ body {
     margin: 0;
 }
 
-*
-*:before,
-*:after {
-    box-sizing: border-box;
-}
 video {
       border-radius: 0px;
       height: 100%;
@@ -40,8 +54,8 @@ video {
     display: flex;
 }
 .container1 {
-    height: 100vh;  
     overflow-y: hidden;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
 }
 .wrapper {
@@ -51,22 +65,11 @@ video {
 .content {
     height: 200vh; /* Set the content height to twice the viewport height */
   }
-.navigator {
-    font-family:'League Spartan', sans-serif;;
-    font-size: 20px;
-    width: 100%;
-    margin-left:34px;
-    margin-top: 5px;
-    margin-right:34px;
-    max-width: 1690px;
-    flex-wrap: wrap;
-    position: fixed;
-    display: flex;
-    align-items: center;
-}
+
 .rectangle {
     width: 1900px;
 	height: 100px;
+    z-index: 998;
     opacity: 50%;
     display: flex;
     position: fixed;
@@ -105,6 +108,10 @@ video {
     color: #619A9A;
     transition: 0.3s;
 }
+.navigator ul li a.active {
+    color: red;
+    transition: 0.3s;
+}
 .nav-link[aria-current="page"] {
     color: #619A9A;
     transition: 200ms;
@@ -121,7 +128,7 @@ video {
 }
 
 .sec1 {
-    height:125vh;
+    height:100vh;
     display:-webkit-box;
     scroll-snap-align: start;
 }
@@ -135,11 +142,12 @@ video {
 .sec2 {
     font-family:'League Spartan', sans-serif;;
     font-size: 20px;
+    margin-top: 150px;
     color: #fff;
+    position: relative;
     text-align: left;
-    display: flex;
     background-color: #141414;
-    height:125vh;
+    height:100vh;
 }
 .sec2 h1{
     display: flex;
@@ -149,38 +157,114 @@ video {
     max-width: 10px;
     max-height: 10px;
 }
+.sec5 h2{
+    display: flex;
+    margin-left:50px;
+    margin-top: 50px;
+    margin-right:750px;
+    max-width: 10px;
+    max-height: 10px;
+}
 .sec2 p{
     display: flex;
-    position: relative;
-    margin-left:-760px;
-    margin-right:50px;
-    margin-top: 200px;
+    z-index: 900;
+    text-align: left;
+    margin-left:50px;
+    margin-right:0px;
+    margin-top: 50px;
 }
 .sec3 {
     height:25vh;
     display: flex;
     scroll-snap-align: start;
 }
+.sec6 {
+    display: flex;
+}
+.spisok {
+    display: flex;
+    font-family:'League Spartan', sans-serif;;
+    font-size: 20px;
+    margin-top: 0px;
+    color: #fff;
+}
+.spisok1 {
+    display: flex;
+    font-family:'League Spartan', sans-serif;;
+    font-size: 20px;
+    margin-top: 0px;
+    color: #fff;
+}
+.spisok2 {
+    display: flex;
+    font-family:'League Spartan', sans-serif;;
+    font-size: 20px;
+    margin-top: 0px;
+    color: #fff;
+}
+.sec7 {
+    display: flex;
+}
+.sec8 {
+    display: flex;
+}
 .sec4 {
     font-family:'League Spartan', sans-serif;;
     font-size: 20px;
     color: #fff;
-    text-align: left;
-    display:inherit;
-    margin-left:50px;
+    margin-top: 150px;
+    margin-left:100px;
     margin-right:750px;
-    display: inherit;
     scroll-snap-align: start;
+}
+.sec4 h1{
+    display: flex;
+    margin-top: 0px;
+}
+.sec4 p{
+    display: flex;
+    margin-top: 0px;
+}
+.sec5 {
+    font-family:'League Spartan', sans-serif;;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    text-align: left;
+    background-color: #141414;
+    height: 250px;
 }
 
 .glide {
+    display: flex-end;
+    margin-left:  50px;
+    margin-top: 50px;
+}
+.glide__slide {
     display: flex;
     position: relative;
-    margin-left:0px;
-    margin-right:-500px;
-    margin-top: 290px;
 }
-
+.sec5 h2{
+    display: flex;
+    margin-top: 40px;
+}
+.sec5 p2{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    color: lightgrey;
+    width: 600px;
+    font-size: 12px;
+    text-align: left;
+    margin-left:50px;
+    margin-right:0px;
+    margin-top: 40px;
+}
+.socialnets1 {
+    display: flex;
+    margin-left:60px;
+    margin-right:50px;
+    margin-top: 20px;
+}
 
 /*.transition-fade {
     opacity: 1;
